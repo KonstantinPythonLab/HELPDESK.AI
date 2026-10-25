@@ -24,7 +24,7 @@ describe('formatTicketId', () => {
   });
 
   test('handles numeric UUID-like strings', () => {
-    const result = formatTicketId(550e8400e29b41d4);
+    const result = formatTicketId('550e8400e29b41d4');
     expect(result).toBe('550E8400');
   });
 });

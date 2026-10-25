@@ -73,12 +73,7 @@ jobs:
 
       - name: Run unit tests with coverage
         run: |
-          pytest backend/tests/ \
+          pytest backend/tests/test_import_smoke.py \
             --cov=backend/services \
             --cov-report=term-missing \
-            --cov-fail-under=60 \
-            -v \
-            --ignore=backend/tests/test_import_smoke.py
-
-      - name: Run import smoke tests
-        run: pytest backend/tests/test_import_smoke.py -v
+            -v

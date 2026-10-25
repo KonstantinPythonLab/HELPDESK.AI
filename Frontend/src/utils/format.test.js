@@ -1,1 +1,65 @@
-LyoqCiAqIEBmaWxlIGZvcm1hdC50ZXN0LmpzCiAqIEBkZXNjcmlwdGlvbiBVbml0IHRlc3RzIGZvciBmb3JtYXQuanMgdXRpbGl0eSBmdW5jdGlvbnMuCiAqLwoKaW1wb3J0IHsgZGVzY3JpYmUsIGl0LCBleHBlY3QgfSBmcm9tICd2aXRlc3QnOwppbXBvcnQgeyBmb3JtYXRUaWNrZXRJZCB9IGZyb20gJy4vZm9ybWF0JzsKCi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQovLyBmb3JtYXRUaWNrZXRJZAovLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmRlc2NyaWJlKCdmb3JtYXRUaWNrZXRJZCcsICgpID0+IHsKICAgIGl0KCdyZXR1cm5zIGVtcHR5IHN0cmluZyBmb3IgbnVsbCcsICgpID0+IHsKICAgICAgICBleHBlY3QoZm9ybWF0VGlja2V0SWQobnVsbCkpLnRvQmUoJycpOwogICAgfSk7CgogICAgaXQoJ3JldHVybnMgZW1wdHkgc3RyaW5nIGZvciB1bmRlZmluZWQnLCAoKSA9PiB7CiAgICAgICAgZXhwZWN0KGZvcm1hdFRpY2tldElkKHVuZGVmaW5lZCkpLnRvQmUoJycpOwogICAgfSk7CgogICAgaXQoJ3JldHVybnMgZW1wdHkgc3RyaW5nIGZvciBlbXB0eSBzdHJpbmcnLCAoKSA9PiB7CiAgICAgICAgZXhwZWN0KGZvcm1hdFRpY2tldElkKCcnKSkudG9CZSgnJyk7CiAgICB9KTsKCiAgICBpdCgncmV0dXJucyBzaG9ydCBzdHJpbmcgYXMtaXMgKGxlbmd0aCA8PSA4KScsICgpID0+IHsKICAgICAgICBleHBlY3QoZm9ybWF0VGlja2V0SWQoJ0FCQzEyMycpKS50b0JlKCdBQkMxMjMnKTsKICAgIH0pOwoKICAgIGl0KCdyZXR1cm5zIDgtY2hhcmFjdGVyIHN0cmluZyBhcy1pcycsICgpID0+IHsKICAgICAgICBleHBlY3QoZm9ybWF0VGlja2V0SWQoJzEyMzQ1Njc4JykpLnRvQmUoJzEyMzQ1Njc4Jyk7CiAgICB9KTsKCiAgICBpdCgnZXh0cmFjdHMgYW5kIHVwcGVyY2FzZXMgZmlyc3Qgc2VnbWVudCBvZiBVVUlEJywgKCkgPT4gewogICAgICAgIGV4cGVjdChmb3JtYXRUaWNrZXRJZCgnYTFiMmMzZDQtZTVmNi03ODkwLWFiY2QtZWYxMjM0NTY3ODkwJykpLnRvQmUoJ0ExQjJDM0Q0Jyk7CiAgICB9KTsKCiAgICBpdCgnaGFuZGxlcyB1cHBlcmNhc2UgVVVJRCBpbnB1dCcsICgpID0+IHsKICAgICAgICBleHBlY3QoZm9ybWF0VGlja2V0SWQoJ0ExQjJDM0Q0LUU1RjYtNzg5MC1BQkNELUVGMTIzNDU2Nzg5MCcpKS50b0JlKCdBMUIyQzNENCcpOwogICAgfSk7CgogICAgaXQoJ2hhbmRsZXMgVVVJRCB3aXRob3V0IGRhc2hlcycsICgpID0+IHsKICAgICAgICAvLyAzMi1jaGFyIHN0cmluZyB3aXRob3V0IGRhc2hlcyDigJQgbGVuZ3RoID4gOCwgc3BsaXRzIG9uICctJyB3aGljaCBnaXZlcyBmdWxsIHN0cmluZwogICAgICAgIGNvbnN0IHV1aWQzMiA9ICdhMWIyYzNkNGU1ZjY3ODkwYWJjZGVmMTIzNDU2Nzg5MCc7CiAgICAgICAgZXhwZWN0KGZvcm1hdFRpY2tldElkKHV1aWQzMikpLnRvQmUodXVpZDMyLnRvVXBwZXJDYXNlKCkpOwogICAgfSk7CgogICAgaXQoJ2hhbmRsZXMgbnVtZXJpYyBpbnB1dCcsICgpID0+IHsKICAgICAgICAvLyBOdW1iZXJzIDw9IDggZGlnaXRzIHJldHVybmVkIGFzLWlzCiAgICAgICAgZXhwZWN0KGZvcm1hdFRpY2tldElkKDEyMzQ1KSkudG9CZSgxMjM0NSk7CiAgICB9KTsKCiAgICBpdCgnaGFuZGxlcyBudW1lcmljIGlucHV0ID4gOCBkaWdpdHMgYnkgY29udmVydGluZyB0byBzdHJpbmcnLCAoKSA9PiB7CiAgICAgICAgY29uc3QgcmVzdWx0ID0gZm9ybWF0VGlja2V0SWQoMTIzNDU2Nzg5KTsKICAgICAgICBleHBlY3QodHlwZW9mIHJlc3VsdCkudG9CZSgnc3RyaW5nJyk7CiAgICB9KTsKCiAgICBpdCgncmV0dXJucyBib29sZWFuIGZhbHNlIGFzIGVtcHR5IHN0cmluZyAoZmFsc3kpJywgKCkgPT4gewogICAgICAgIGV4cGVjdChmb3JtYXRUaWNrZXRJZChmYWxzZSkpLnRvQmUoJycpOwogICAgfSk7CgogICAgaXQoJ3JldHVybnMgemVybyBhcyBlbXB0eSBzdHJpbmcgKGZhbHN5KScsICgpID0+IHsKICAgICAgICBleHBlY3QoZm9ybWF0VGlja2V0SWQoMCkpLnRvQmUoJycpOwogICAgfSk7Cn0pOwo=
+/**
+ * @file format.test.js
+ * @description Unit tests for format.js utility functions.
+ */
+
+import { describe, it, expect } from 'vitest';
+import { formatTicketId } from './format';
+
+// ---------------------------------------------------------------------------
+// formatTicketId
+// ---------------------------------------------------------------------------
+
+describe('formatTicketId', () => {
+    it('returns empty string for null', () => {
+        expect(formatTicketId(null)).toBe('');
+    });
+
+    it('returns empty string for undefined', () => {
+        expect(formatTicketId(undefined)).toBe('');
+    });
+
+    it('returns empty string for empty string', () => {
+        expect(formatTicketId('')).toBe('');
+    });
+
+    it('returns short string as-is (length <= 8)', () => {
+        expect(formatTicketId('ABC123')).toBe('ABC123');
+    });
+
+    it('returns 8-character string as-is', () => {
+        expect(formatTicketId('12345678')).toBe('12345678');
+    });
+
+    it('extracts and uppercases first segment of UUID', () => {
+        expect(formatTicketId('a1b2c3d4-e5f6-7890-abcd-ef1234567890')).toBe('A1B2C3D4');
+    });
+
+    it('handles uppercase UUID input', () => {
+        expect(formatTicketId('A1B2C3D4-E5F6-7890-ABCD-EF1234567890')).toBe('A1B2C3D4');
+    });
+
+    it('handles UUID without dashes', () => {
+        // 32-char string without dashes — length > 8, splits on '-' which gives full string
+        const uuid32 = 'a1b2c3d4e5f67890abcdef1234567890';
+        expect(formatTicketId(uuid32)).toBe(uuid32.toUpperCase());
+    });
+
+    it('handles numeric input', () => {
+        // Numbers <= 8 digits returned as-is
+        expect(formatTicketId(12345)).toBe(12345);
+    });
+
+    it('handles numeric input > 8 digits by converting to string', () => {
+        const result = formatTicketId(123456789);
+        expect(typeof result).toBe('string');
+    });
+
+    it('returns boolean false as empty string (falsy)', () => {
+        expect(formatTicketId(false)).toBe('');
+    });
+
+    it('returns zero as empty string (falsy)', () => {
+        expect(formatTicketId(0)).toBe('');
+    });
+});
