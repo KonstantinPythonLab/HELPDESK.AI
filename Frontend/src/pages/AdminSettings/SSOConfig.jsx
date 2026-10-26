@@ -385,7 +385,7 @@ const SSOConfig = () => {
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-2">Protocol</label>
                                 <select
                                     value={providerForm.protocol}
-                                    onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, protocol: e.target.value  }})}
+                                    onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, protocol: e.target.value }); }}
                                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-black text-slate-700 uppercase outline-none focus:border-indigo-600 transition-colors"
                                 >
                                     <option value="saml">SAML 2.0 Assertion</option>
@@ -401,7 +401,7 @@ const SSOConfig = () => {
                                     type="text"
                                     placeholder="enterprise.com, co.org"
                                     value={providerForm.domain_names}
-                                    onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, domain_names: e.target.value  }})}
+                                    onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, domain_names: e.target.value }); }}
                                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-600 transition-colors"
                                 />
                             </div>
@@ -415,7 +415,7 @@ const SSOConfig = () => {
                                             type="url"
                                             placeholder="https://identity.okta.com/app/sso/saml"
                                             value={providerForm.sso_url || ''}
-                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, sso_url: e.target.value  }})}
+                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, sso_url: e.target.value }); }}
                                             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-600 transition-colors"
                                         />
                                     </div>
@@ -425,7 +425,7 @@ const SSOConfig = () => {
                                             type="text"
                                             placeholder="http://www.okta.com/exk..."
                                             value={providerForm.entity_id || ''}
-                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, entity_id: e.target.value  }})}
+                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, entity_id: e.target.value }); }}
                                             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-600 transition-colors"
                                         />
                                     </div>
@@ -435,7 +435,7 @@ const SSOConfig = () => {
                                             rows={6}
                                             placeholder="MIIDrjCCApagAwIBAgIGAX..."
                                             value={providerForm.x509_cert || ''}
-                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, x509_cert: e.target.value  }})}
+                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, x509_cert: e.target.value }); }}
                                             className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-[10px] font-mono text-slate-700 outline-none focus:border-indigo-600 transition-colors resize-none"
                                         />
                                     </div>
@@ -451,7 +451,7 @@ const SSOConfig = () => {
                                             type="text"
                                             placeholder="your-client-id"
                                             value={providerForm.client_id || ''}
-                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, client_id: e.target.value  }})}
+                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, client_id: e.target.value }); }}
                                             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-600 transition-colors"
                                         />
                                     </div>
@@ -461,7 +461,7 @@ const SSOConfig = () => {
                                             type="password"
                                             placeholder="••••••••••••••••"
                                             value={providerForm.client_secret || ''}
-                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, client_secret: e.target.value  }})}
+                                            onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, client_secret: e.target.value }); }}
                                             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-600 transition-colors"
                                         />
                                     </div>
@@ -472,7 +472,7 @@ const SSOConfig = () => {
                                                 type="url"
                                                 placeholder="https://accounts.google.com"
                                                 value={providerForm.metadata_url || ''}
-                                                onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, metadata_url: e.target.value  }})}
+                                                onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, metadata_url: e.target.value }); }}
                                                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-600 transition-colors"
                                             />
                                         </div>
