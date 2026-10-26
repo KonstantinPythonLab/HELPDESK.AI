@@ -1,43 +1,43 @@
-# Virtual Environments and Python Caches
-.venv/
-venv/
-ENV/
-.tmp-ci-venv/
-__pycache__/
+# Virtual Environments and Python Caches (anchored to root)
+/.venv/
+/venv/
+/ENV/
+/.tmp-ci-venv/
+/__pycache__/
 *.pyc
-.pytest_cache/
-.ruff_cache/
+/.pytest_cache/
+/.ruff_cache/
 
-# Heavy non-frontend subprojects
-backend/
-MobileApp/
-Fastapi/
-k8s/
-deploy/
-docker/
-supabase/
-scratch/
-main_clean/
-numpy/
+# Heavy non-frontend subprojects (anchored to root)
+/backend/
+/MobileApp/
+/Fastapi/
+/k8s/
+/deploy/
+/docker/
+/supabase/
+/scratch/
+/main_clean/
+/numpy/
 
-# Testing & E2E
-cypress/
-cypress.config.js
-tests/
-test_status.json
+# Testing & E2E (anchored to root)
+/cypress/
+/cypress.config.js
+/tests/
+/test_status.json
 
-# Documentation & Tooling
-docs/
-*.md
-postman/
-postman_collection.json
+# Root Documentation & Tooling (do NOT ignore Frontend/src/docs)
+/docs/
+/*.md
+/postman/
+/postman_collection.json
 
-# Local scripts & data
-scripts/
-*.bat
-*.sh
-*.sql
-*.py
-bounty_context.json
-contributor_compliance_report.json
-issue_tracker_state.json
+# Root scripts & temp data
+/scripts/
+/*.bat
+/*.sh
+/*.sql
+/*.py
+/bounty_context.json
+/contributor_compliance_report.json
+/issue_tracker_state.json
