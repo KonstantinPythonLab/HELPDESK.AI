@@ -485,7 +485,7 @@ const SSOConfig = () => {
                                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Activate or deactivate login redirection for matched domains.</p>
                                 <button
                                     type="button"
-                                    onClick={() => if (mountedRef.current) setProviderForm({ ...providerForm, is_active: !providerForm.is_active })}
+                                    onClick={() => { if (mountedRef.current) setProviderForm({ ...providerForm, is_active: !providerForm.is_active }); }}
                                     className={`w-14 h-8 rounded-full relative transition-all duration-300 shadow-inner shrink-0 ${providerForm.is_active ? 'bg-indigo-600' : 'bg-slate-200'}`}
                                 >
                                     <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 shadow-md ${providerForm.is_active ? 'right-1' : 'left-1'}`}></div>
