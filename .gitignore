@@ -61,5 +61,6 @@ logs/
 scratch/
 main_clean/
 issue_tracker_state.json
+contributor_compliance_report.json
 .temp/
 supabase/.temp/

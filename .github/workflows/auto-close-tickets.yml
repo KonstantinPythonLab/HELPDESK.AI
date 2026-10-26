@@ -1,0 +1,35 @@
+name: Auto-Close Resolved Tickets
+
+on:
+  schedule:
+    # Run daily at 02:00 UTC (matching AUTO_CLOSE_CRON_SCHEDULE)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Allow manual triggering via GitHub Actions UI
+
+jobs:
+  auto-close:
+    name: Run Auto-Close Ticket Sweep
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install supabase python-dotenv
+
+      - name: Run Auto-Close Service
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          AUTO_CLOSE_ENABLED: "true"
+        run: |
+          python -m backend.services.auto_close_service

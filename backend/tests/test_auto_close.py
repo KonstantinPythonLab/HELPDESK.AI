@@ -92,6 +92,17 @@ class TestAutoCloseService(unittest.TestCase):
         self.assertEqual(stats["closed_count"], 0)
         self.assertEqual(stats["error_count"], 1)
 
+    def test_singleton_load(self):
+        from backend.services.auto_close_service import load, get_instance
+        instance = load()
+        self.assertIsNotNone(instance)
+        self.assertIs(get_instance(), instance)
+
+    def test_run_when_disabled(self):
+        self.service.enabled = False
+        res = self.service.run()
+        self.assertEqual(res, {"status": "disabled"})
+
 
 if __name__ == "__main__":
     unittest.main()

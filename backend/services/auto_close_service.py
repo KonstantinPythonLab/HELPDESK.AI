@@ -282,3 +282,9 @@ def load():
 def get_instance() -> Optional[AutoCloseService]:
     """Get the singleton instance if already loaded."""
     return _instance
+
+
+if __name__ == "__main__":
+    service = load()
+    result = service.run()
+    print(f"AutoCloseService execution completed: {result}")

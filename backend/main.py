@@ -19,7 +19,7 @@ from contextlib import asynccontextmanager
 warnings.filterwarnings("ignore", message="'pin_memory'")
 
 # HF Rebuild Trigger: 2026-03-08-2030
-from fastapi import FastAPI, Depends, HTTPException, Request, Response
+from fastapi import FastAPI, Depends, HTTPException, Request, Response, Header
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
@@ -532,6 +532,44 @@ async def readiness_check():
         status_code=503,
         content=jsonable_encoder(ReadinessResponse(status="not_ready", checks=checks)),
     )
+
+
+# ---------------------------------------------------------------------------
+# Auto-Close Endpoints
+# ---------------------------------------------------------------------------
+@app.get("/internal/auto-close/status")
+async def auto_close_status():
+    """Get status and configuration of AutoCloseService."""
+    from backend.services.auto_close_service import get_instance, load as load_auto_close
+
+    svc = get_instance() or load_auto_close()
+    return {
+        "status": "ready",
+        "enabled": getattr(svc, "enabled", True),
+        "default_auto_close_days": getattr(svc, "default_auto_close_days", 7),
+        "cron_schedule": getattr(svc, "cron_schedule", "0 2 * * *"),
+    }
+
+
+@app.post("/internal/auto-close/run")
+async def trigger_auto_close(authorization: str | None = Header(None)):
+    """Trigger an on-demand AutoClose sweep.
+
+    Can be called manually, via external cron (e.g. Vercel Cron, GitHub Actions), or admin tooling.
+    Secured by INTERNAL_CRON_SECRET if configured in the environment.
+    """
+    cron_secret = os.environ.get("INTERNAL_CRON_SECRET")
+    if cron_secret and authorization != f"Bearer {cron_secret}":
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+    try:
+        from backend.services.auto_close_service import load as load_auto_close
+
+        svc = load_auto_close()
+        result = await asyncio.to_thread(svc.run)
+        return {"status": "success", "result": result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 class TroubleshootRequest(BaseModel):
