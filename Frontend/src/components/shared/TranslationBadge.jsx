@@ -109,11 +109,12 @@ export function TranslationDetails({
   translatedText,
   confidence 
 }) {
+  const [showOriginal, setShowOriginal] = React.useState(false);
+
   if (!detectedLanguage || detectedLanguage === 'en' || !originalText) {
     return null;
   }
 
-  const [showOriginal, setShowOriginal] = React.useState(false);
   const languageName = LANGUAGE_NAMES[detectedLanguage] || detectedLanguage.toUpperCase();
 
   return (
