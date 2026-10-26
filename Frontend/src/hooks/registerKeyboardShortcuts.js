@@ -254,11 +254,11 @@ export const formatShortcut = (shortcut) => {
                 .map(key => {
                     switch (key.toLowerCase().trim()) {
                         case 'ctrl':
-                            return isMac ? '鈱? : 'Ctrl';
+                            return isMac ? '⌘' : 'Ctrl';
                         case 'shift':
-                            return isMac ? '鈬? : 'Shift';
+                            return isMac ? '⇧' : 'Shift';
                         case 'alt':
-                            return isMac ? '鈱? : 'Alt';
+                            return isMac ? '⌥' : 'Alt';
                         case 'g':
                             return 'G';
                         default:

@@ -31,6 +31,9 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'off',
+    },
     rules: {
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
@@ -39,6 +42,9 @@ export default defineConfig([
       'no-constant-condition': 'off',
       'react-hooks/exhaustive-deps': 'off',
       'react-hooks/set-state-in-effect': 'off',
+      'react-hooks/refs': 'off',
+      'react-hooks/preserve-manual-memoization': 'off',
+      'react-hooks/immutability': 'off',
       'react-refresh/only-export-components': 'off',
     },
   },

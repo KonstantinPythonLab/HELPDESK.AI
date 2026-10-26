@@ -61,7 +61,7 @@ const KeyboardShortcutsHelp = ({ isOpen, onClose, shortcuts = [] }) => {
 
     // Detect Mac for display
     const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-    const ctrlLabel = isMac ? '鈱? : 'Ctrl';
+    const ctrlLabel = isMac ? '⌘' : 'Ctrl';
 
     return (
         <div 

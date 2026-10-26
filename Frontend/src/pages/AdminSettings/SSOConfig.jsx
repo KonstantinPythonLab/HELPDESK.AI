@@ -371,7 +371,7 @@ const SSOConfig = () => {
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-2">Provider Name</label>
                                 <select
                                     value={providerForm.provider_name}
-                                    onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, provider_name: e.target.value  }})}
+                                    onChange={(e) => { if (mountedRef.current) setProviderForm({ ...providerForm, provider_name: e.target.value }); }}
                                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-black text-slate-700 uppercase outline-none focus:border-indigo-600 transition-colors"
                                 >
                                     <option value="okta">Okta Identity</option>

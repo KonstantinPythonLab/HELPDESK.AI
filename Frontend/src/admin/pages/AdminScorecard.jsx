@@ -2,10 +2,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import {
     Trophy, Target, TrendingUp, TrendingDown, Zap, Users,
     Clock, AlertTriangle, CheckCircle2, Bot, RefreshCw,
-    ChevronDown, ChevronUp, Star, BookOpen, Lightbulb
+    ChevronDown, ChevronUp, Star, BookOpen, Lightbulb,
+    ChevronLeft, Activity
 } from 'lucide-react';
 import useAuthStore from '../../store/authStore';
 import { API_CONFIG } from '../../config';
+import AgentLeaderboard from '../../components/AgentLeaderboard';
+import AgentScorecard from '../../components/AgentScorecard';
+import PullToRefresh from '../../components/shared/PullToRefresh';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -384,12 +388,7 @@ const AdminScorecardOld = () => {
             )}
         </div>
     );
-import { Users, RefreshCw, TrendingUp, ChevronLeft, Activity, Trophy } from 'lucide-react';
-import useAuthStore from '../../store/authStore';
-import { API_CONFIG } from '../../config';
-import AgentLeaderboard from '../../components/AgentLeaderboard';
-import AgentScorecard from '../../components/AgentScorecard';
-import PullToRefresh from '../../components/shared/PullToRefresh';
+};
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 const BACKEND = API_CONFIG.BACKEND_URL;
