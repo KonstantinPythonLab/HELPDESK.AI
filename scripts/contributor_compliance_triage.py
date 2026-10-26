@@ -122,6 +122,10 @@ def triage_pr(pr_number, followers, stargazers, forkers, apply_comment=False):
     author_lower = author.lower()
     base = pr_data.get("baseRefName", "")
 
+    if author_lower in (ADMIN.lower(), "github-actions", "dependabot", "app/dependabot"):
+        print(f"Skipping maintainer/bot @{author} for PR #{pr_number}.")
+        return {"type": "pr", "number": pr_number, "author": author, "base": base, "compliant": True, "missing": []}
+
     is_following = author_lower in followers
     has_starred = author_lower in stargazers
     has_forked = author_lower in forkers
@@ -166,6 +170,10 @@ def triage_issue(issue_number, followers, stargazers, forkers, apply_comment=Fal
 
     author = issue_data["author"]["login"]
     author_lower = author.lower()
+
+    if author_lower in (ADMIN.lower(), "github-actions", "dependabot", "app/dependabot"):
+        print(f"Skipping maintainer/bot @{author} for Issue #{issue_number}.")
+        return {"type": "issue", "number": issue_number, "author": author, "compliant": True, "missing": []}
 
     is_following = author_lower in followers
     has_starred = author_lower in stargazers
