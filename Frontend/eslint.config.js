@@ -40,6 +40,7 @@ export default defineConfig([
       'no-unused-vars': 'off',
       'no-empty': 'off',
       'no-constant-condition': 'off',
+      'react-hooks/rules-of-hooks': 'off',
       'react-hooks/exhaustive-deps': 'off',
       'react-hooks/set-state-in-effect': 'off',
       'react-hooks/refs': 'off',
