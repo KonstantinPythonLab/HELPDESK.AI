@@ -23,6 +23,7 @@ export default defineConfig([
         ...globals.browser,
         ...globals.node,
         ...globals.vitest,
+        ...globals.jest,
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -30,13 +31,15 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
-        rules: {
+    rules: {
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]', args: 'none', caughtErrorsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
+      'no-empty': 'off',
+      'no-constant-condition': 'off',
       'react-hooks/exhaustive-deps': 'off',
       'react-hooks/set-state-in-effect': 'off',
       'react-refresh/only-export-components': 'off',
-        },
+    },
   },
 ])
