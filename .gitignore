@@ -20,7 +20,15 @@ htmlcov/
 backend/.env
 Frontend/.env
 
-# Node / Frontend
+# Virtual Environments & Models
+backend/venv/
+backend/.venv/
+.venv/
+backend/data/case_history_cache.json
+data/low_confidence_log.json
+user_feedback_rows.csv
+
+# Frontend
 node_modules/
 **/node_modules/
 dist/

@@ -275,11 +275,11 @@ async def lifespan(app: FastAPI):
     print("[Startup] Loading AI models ...")
     try:
         classifier_service.load()
-    except FileNotFoundError as e:
+    except Exception as e:
         print(f"[WARNING] Classifier not loaded: {e}")
     try:
         ner_service.load()
-    except FileNotFoundError as e:
+    except Exception as e:
         print(f"[WARNING] NER not loaded: {e}")
     try:
         duplicate_service.load()

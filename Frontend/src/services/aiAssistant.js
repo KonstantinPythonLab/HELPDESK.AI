@@ -58,11 +58,20 @@ const runWithFailover = async (messages) => {
 
 // Local text-only fallback used when every provider fails
 const localFallbackSummary = (issueText) => {
-  const text = issueText.trim();
-  const summary =
-    (text.charAt(0).toUpperCase() + text.slice(1)).substring(0, 100) +
-    (text.length > 100 ? '…' : '');
-  return { summary, image_description: '' };
+  const text = (issueText || '').trim();
+  const summary = text
+    ? (text.charAt(0).toUpperCase() + text.slice(1)).substring(0, 100) +
+      (text.length > 100 ? '…' : '')
+    : 'User reported issue';
+  return {
+    summary,
+    image_description: '',
+    category: "General",
+    subcategory: "General Inquiry",
+    priority: "Medium",
+    assigned_team: "General Support",
+    confidence: 0.5
+  };
 };
 
 // ─── Build messages ──────────────────────────────────────────────────────────
